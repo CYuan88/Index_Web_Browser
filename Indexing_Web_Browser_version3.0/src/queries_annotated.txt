@@ -1,0 +1,8 @@
+select messiers where ra < 40				// correct query
+select stars where ra < 400 ra > 40			// malformed query (there is an AND missing between “ra < 400” and “ra > 40”)
+select stars where distance > 300			// correct query
+selekt messiers where ra > 40				// malformed query (“selekt” keyword is incorrect)
+select messiers where distance = 60000000.0		// correct query
+select planets						// correct query (it should return all planets)
+select stars where ra > 60 and ra < 90 and decl < 10 and decl > 0	// correct query
+select messiers where ra > forty			// malformed query (“forty” can not be interpreted)
